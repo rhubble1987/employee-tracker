@@ -15,7 +15,7 @@ use directory_db;
 create table roles (
     id int not null auto_increment,
     title varchar(30) not null,
-    salary decimal(20,2),
+    salary decimal(20,2) not null,
     department_id int not null,
     primary key (id)
 );
@@ -27,7 +27,7 @@ create table employees (
     first_name varchar(30) not null,
     last_name varchar(30) not null,
     role_id int not null,
-    manager_id int,
+    manager varchar(30),
     primary key (id)
 );
 
